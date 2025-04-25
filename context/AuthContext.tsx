@@ -3,6 +3,7 @@ import { AuthUser, AuthContextType, LoginData } from '../types/auth.d';
 import { authService } from '../api/auth';
 import { storeToken, removeToken, getToken } from '../utils/token';
 import { string } from 'yup';
+import { toast } from '@backpackapp-io/react-native-toast';
 
 const AuthContext = createContext<AuthContextType | null>(null);
 
@@ -27,7 +28,8 @@ console.log(isLoading);
                     setUser(response.data.user);
                 }
             } catch (err) {
-                console.error('Failed to load user:', err);
+                // console.error('Failed to load user:', err);
+                toast.error('system logout, silahkan login kembali')
                 logout()
             } finally {
                 setIsLoading(false);
@@ -43,7 +45,7 @@ console.log(isLoading);
         
         try {
             const response = await authService.login(data);
-            console.log('response context',response.data.token);
+            // console.log('response context',response.data.token);
             
             await storeToken(response.data.token);
             setUser(response.data.user);

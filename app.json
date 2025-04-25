@@ -9,7 +9,9 @@
     "experiments": {
       "tsconfigPaths": true
     },
-    "plugins": [],
+    "plugins": [
+      "expo-camera"
+    ],
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -31,7 +33,8 @@
       },
       "package": "com.nama.seconds_app",
       "minSdkVersion": 29,
-      "targetSdkVersion": 34
+      "targetSdkVersion": 34,
+      "permissions": ["CAMERA"]
     },
     "extra": {
       "eas": {

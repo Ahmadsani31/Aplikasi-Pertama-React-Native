@@ -28,8 +28,8 @@ export default function LoginScreen({ navigation }: any) {
         onSubmit: async (values) => {
             const username = values.username;
             const password = values.password;
-          await login({ username, password });
-            toast.error('Wow. That Sucked!');
+            await login({ username, password });
+            toast.success('Login Successfully, Welcome')
         },
     });
 

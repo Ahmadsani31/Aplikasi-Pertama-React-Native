@@ -54,7 +54,7 @@ export default function BarcodeScanner({ onScan, onClose }: {
   }
 
   return (
-    <View style={styles.container}>
+    <View style={styles.container} className='mb-5'>
       <CameraView
         style={styles.camera}
       facing='back'

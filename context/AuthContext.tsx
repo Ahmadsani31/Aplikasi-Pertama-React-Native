@@ -43,7 +43,7 @@ console.log(isLoading);
         
         try {
             const response = await authService.login(data);
-            console.log('response context',response.data.token);
+            // console.log('response context',response.data.token);
             
             await storeToken(response.data.token);
             setUser(response.data.user);

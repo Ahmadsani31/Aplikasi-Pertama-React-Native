@@ -32,7 +32,7 @@ export const authService = {
         Authorization: `Bearer ${token}`,
       },
     });
-    console.log('response user', response);
+    // console.log('response user', response);
     return response;
   },
 };
